@@ -9,11 +9,11 @@ app.set('view engine','jade');
 
 app.use(function (req, res, next) {
   console.log('Time: %d', Date.now());
-  next();
+  next();  
 })
 
-app.get('/q', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
+app.get('/', function (req, res) {
+  res.render('index');
 });
 
 app.get('/', function (req, res) {
